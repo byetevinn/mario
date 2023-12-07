@@ -10,6 +10,14 @@
     }, 500);
   });
 
+  document.addEventListener('touchstart', () => {
+    mario.classList.add('jump');
+
+    setTimeout(() => {
+      mario.classList.remove('jump');
+    }, 500);
+  });
+
   const loop = setInterval(() => {
     const pipePosition = pipe.offsetLeft;
     const marioPosition = +window
